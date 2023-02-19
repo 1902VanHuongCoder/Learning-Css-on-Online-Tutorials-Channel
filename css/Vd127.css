@@ -1,0 +1,27 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    background-color: #262626;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+h1
+{
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+    font-size: 5em;
+    width: 100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff,#00f);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 7px rgba(0,0,0,.5);
+}
