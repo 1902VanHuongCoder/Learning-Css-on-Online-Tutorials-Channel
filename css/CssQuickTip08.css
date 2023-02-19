@@ -1,0 +1,27 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(660px / 5);
+    height: 139px;
+    background: url(../img/CssQuickTip08/SpritesSheet.jpeg);
+    animation: animate 1s steps(6) infinite;
+}
+@keyframes animate {
+    from
+    {
+        background-position: 0;
+    }
+    to
+    {
+        background-position: -660px;
+    }
+}

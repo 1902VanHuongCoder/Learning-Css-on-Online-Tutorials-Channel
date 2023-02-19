@@ -1,0 +1,38 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    background: #2f4ee7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle
+{
+    width: 70px;
+    height: 70px;
+    border-top: #1cec6c 10px solid !important;
+    border-bottom: 10px solid rgb(218, 225, 26);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}

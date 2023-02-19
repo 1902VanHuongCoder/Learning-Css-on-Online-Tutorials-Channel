@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Video 124</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/Vd124.css'>
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <div class="center">
+        <div class="phone">
+            <div class="screen"></div>
+            <div class="home"></div>
+            <div class="inner"></div>
+            <ul class="volumn">
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="silent">
+                <li></li>
+            </ul>
+            <ul class="sleep">
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.home').click(function () {
+                $('.screen').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

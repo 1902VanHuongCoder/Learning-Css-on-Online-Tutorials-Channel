@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    min-height: 100vh;
+    background: rgb(47, 46, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle{
+    position: relative;
+    width: 240px;
+    height: 102px;
+    background: url(../img/CssQuickTipImage/menu.png);
+}
+
+.toggle::before{
+    position: absolute;
+    content: url(../img/CssQuickTipImage/close.png);
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    transition: width .5s;
+}
+
+.toggle.active::before{
+    width: 100%;
+    transition: width .5s;
+}

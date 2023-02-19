@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $('a').click(function(){
+        $('span').toggleClass('active');
+    });
+    $('.signInVd93').click(function(){
+        $('.fold').toggleClass('showFormSignInvd93');
+    });
+    $('.vd96_container').click(function(){
+        $('.spanVd96').toggleClass('active');
+    });
+    $('.menuIcon').click(function(){
+        $('.vd118_menu').toggleClass("active");
+    })
+})

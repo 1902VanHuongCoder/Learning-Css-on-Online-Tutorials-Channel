@@ -1,0 +1,66 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.box .text1
+{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #efeb1c;
+    background: #4d4c4c;
+    text-shadow: 0 0 5px #000;
+    transition: .5s;
+}
+.box .text2
+{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: #efeb1c;
+    color: #131212;
+    text-shadow: 0 0 1px #000;
+    transition: .5s;
+}
+
+.box:hover .text1
+{
+    transform: translateY(-150px);
+}
+.box:hover .text2
+{
+    transform: translateY(-150px);
+}

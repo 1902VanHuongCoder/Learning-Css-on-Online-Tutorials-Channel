@@ -1,0 +1,143 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.wall
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 400px;
+}
+
+.wall ul
+{
+    position: relative;
+    width: 90%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wall ul li
+{
+    position: relative;
+    list-style: none;
+    height: 80%;
+    width: 10px;
+    margin: 0px 30px;
+}
+
+.wall ul li:nth-child(1)
+{
+    background-color: aqua;
+    box-shadow: 0 0 10px #1ec7da,
+                0 0 30px #1ec7da,
+                0 0 50px #1ec7da,
+                0 0 70px #1ec7da;
+}
+.wall ul li:nth-child(2)
+{
+    background-color: rgb(9, 223, 41);
+    box-shadow: 0 0 10px rgb(9, 223, 41),
+                0 0 30px rgb(9, 223, 41),
+                0 0 50px rgb(9, 223, 41),
+                0 0 70px rgb(9, 223, 41);
+    animation: animate1 1s infinite linear;
+}
+@keyframes animate1 {
+    0%
+    {
+        background-color: rgb(9, 223, 41);
+        box-shadow: 0 0 10px rgb(9, 223, 41),
+                0 0 30px rgb(9, 223, 41),
+                0 0 50px rgb(9, 223, 41),
+                0 0 70px rgb(9, 223, 41);
+    }
+    40%
+    {
+        background: rgba(52, 52, 49, 0.819);
+        box-shadow: none;
+    }
+    40.1%
+    {
+        background-color: rgb(9, 223, 41);
+        box-shadow: 0 0 10px rgb(9, 223, 41),
+                0 0 30px rgb(9, 223, 41),
+                0 0 50px rgb(9, 223, 41),
+                0 0 70px rgb(9, 223, 41);
+    }
+    100%
+    {
+        background-color: rgb(9, 223, 41);
+        box-shadow: 0 0 10px rgb(9, 223, 41),
+                0 0 30px rgb(9, 223, 41),
+                0 0 50px rgb(9, 223, 41),
+                0 0 70px rgb(9, 223, 41);
+    }
+
+}
+.wall ul li:nth-child(3)
+{
+    background-color: rgb(221, 21, 252);
+    box-shadow: 0 0 10px rgb(221, 21, 252),
+                0 0 30px rgb(221, 21, 252),
+                0 0 50px rgb(221, 21, 252),
+                0 0 70px rgb(221, 21, 252);
+}
+.wall ul li:nth-child(4)
+{
+    background-color: rgb(252, 244, 21);
+    box-shadow: 0 0 10px rgb(252, 244, 21),
+                0 0 30px rgb(252, 244, 21),
+                0 0 50px rgb(252, 244, 21),
+                0 0 70px rgb(252, 244, 21);
+}
+.wall ul li:nth-child(5)
+{
+    background-color: rgb(236, 32, 9);
+    box-shadow: 0 0 10px rgb(236, 32, 9),
+                0 0 30px rgb(236, 32, 9),
+                0 0 50px rgb(236, 32, 9),
+                0 0 70px rgb(236, 32, 9);
+}
+.wall ul li:nth-child(6)
+{
+    background-color: rgb(246, 40, 249);
+    box-shadow: 0 0 10px rgb(246, 40, 249),
+                0 0 30px rgb(246, 40, 249),
+                0 0 50px rgb(246, 40, 249),
+                0 0 70px rgb(246, 40, 249);
+}
+.wall ul li::before
+{
+    content: "";
+    position: absolute;
+    background: rgba(52, 52, 49, 0.819);
+    top: -25px;
+    width: 100%;
+    height: 25px;
+}
+.wall ul li::after
+{
+    content: "";
+    position: absolute;
+    background: rgba(52, 52, 49, 0.819);
+    bottom: -25px;
+    width: 100%;
+    height: 25px;
+}
+

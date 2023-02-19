@@ -1,0 +1,88 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: url(../img/RainAnimationImage/blonde-woman-coat-standing-street-night.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.rain
+{
+    height: 100vh;
+    background: url(../img/RainAnimationImage/rain.png);
+    opacity: 0.5;
+    animation: rain .5s linear infinite;
+    transition: 0.5s;
+
+}
+
+.rain::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: lighting 2s linear infinite;
+}
+
+@keyframes rain {
+    0%
+    {
+        background-position:  0 0;
+    }
+    100%
+    {
+        background-position: 30px 100px;
+    }
+}
+
+@keyframes lighting {
+    0%
+    {
+        opacity: 0;
+    }
+    10%
+    {
+        opacity: 0;
+    }
+    11%
+    {
+        opacity: 0;
+    }
+    12%
+    {
+        opacity: 0;
+    }
+    13%
+    {
+        opacity: 0;
+    }
+    14%
+    {
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 0;
+    }
+    21%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    70%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
