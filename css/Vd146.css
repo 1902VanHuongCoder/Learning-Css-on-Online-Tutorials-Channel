@@ -28,7 +28,7 @@ section p
     color: #fff;
     text-shadow: 0 1px 1px #000;
     text-align: center;
-   mix-blend-mode: screen;
+    mix-blend-mode: screen;
 }
 
 section p::before
