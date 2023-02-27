@@ -1,0 +1,76 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #e91e63;
+}
+
+.scrollDown
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* border: 1px solid #fff; */
+    height: 50px;
+}
+
+.scrollDown::before
+{
+    content:"";
+    position: absolute;
+    bottom: 1px;
+    left: -10px;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.scrollDown::after
+{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: -5.5px;
+    height: 100%;
+    width: 2px;
+    background: #fff;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform-origin:top;
+        transform: scaleY(0);
+    }
+    45%
+    {
+        transform-origin:top;
+        transform: scaleY(1);
+    }
+    55%
+    {
+        transform-origin:bottom;
+        transform: scaleY(1);
+    }
+    100%
+    {
+        transform-origin:bottom;
+        transform: scaleY(0);
+    }
+}
+
+.scrollDownText
+{
+    color: #fff;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: -25px;
+    left: -65px;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+}
