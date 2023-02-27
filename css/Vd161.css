@@ -1,0 +1,67 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #3f3d3d;
+}
+
+.skillsBox
+{
+    width: 500px;
+    border: 1px solid #323131;
+    margin: 100px auto;
+    font-family: sans-serif;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px #000;
+}
+
+.skillsBox h1
+{
+    text-align: center;
+    padding: 10px;
+}
+.skillsBox .skills
+{
+    box-sizing: border-box;
+}
+.skillsBox .progress
+{
+    width: 90%;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 10px auto 5px;
+    overflow: hidden;
+}
+.skills h2
+{
+    font-size: 16px;
+    padding-left: 25px;
+}
+.skillsBox .progress .percent
+{
+    text-align: right;
+    border-right: 1px solid #fff;
+    font-size: 14px;
+    height: 100%;
+    padding-right: 5px;
+    background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,.25) 25%,
+    rgba(255,255,255,.25) 50%, transparent 50%, transparent 75%, rgba(255,255,255,.25) 75%, rgba(255,255,255,.25) 100%);
+    background-size: 30px 30px;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    0%
+    {
+        background-position: 0 0;
+    }
+    100%
+    {
+        background-position:30px 0px;
+    }
+}
