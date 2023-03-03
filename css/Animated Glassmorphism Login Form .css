@@ -61,14 +61,15 @@ section .form
     transform: translate(-50%, -50%);
     width: 300px;
     min-height: 200px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
     border-radius: 5px;
     border: 1px solid rgba(255,255,255,.5);
+    z-index: 100;
 }
 
 section .form h1
 {
-    color: #000;
+    color: #fff;
     width: 100%;
     text-align: center;
     padding: 10px 0;
@@ -88,6 +89,9 @@ section .form .input input
     width: 90%;
     height: 100%;
     padding: 0 0 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
 }
 
 section .form .input input::placeholder
@@ -114,6 +118,7 @@ section .form .button a
     line-height: 40px;
     color: #fff;
     border-radius: 5px;
+    text-shadow: 0 2px 1px #0f0f0f;
 }
 
 section .more
@@ -126,8 +131,10 @@ section .more a:nth-child(1)
 {
     text-decoration: none;
     padding: 20px 0 10px 20px;
+    color: #fff;
 }
 section .more a:nth-child(2){
     padding: 20px 10px 0 20px;
+    color: #fff;
 }
 
