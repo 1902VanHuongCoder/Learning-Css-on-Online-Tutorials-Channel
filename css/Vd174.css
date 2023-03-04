@@ -1,0 +1,138 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+.preload
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background: #000; */
+}
+
+.preload:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #262626;
+    transition: 1s;
+}
+.preload.complete::before
+{
+    left: -50%;
+}
+.preload::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #262626;
+    transition: 1s;
+}
+
+.preload.complete::after
+{
+    right: -50%;
+}
+
+.btn
+{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/**** Copy From Video 169 (Loading Animation) ****/
+
+.loader
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 3px solid #f1e9e9;
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    z-index: 10000;
+}
+.loader.complete
+{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::before
+{
+    content:"";
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f3eeee;
+    animation: animateBg 2s linear infinite;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25%
+    {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    50%
+    {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    75%
+    {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100%
+    {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes animateBg {
+    0%
+    {
+        height: 0;
+    }
+    25%
+    {
+        height: 0;
+    }
+    50%
+    {
+        height: 100%;
+    }
+    75%
+    {
+        height: 100%;
+    }
+    100%
+    {
+        height: 0;
+    }
+}
+
+
+
