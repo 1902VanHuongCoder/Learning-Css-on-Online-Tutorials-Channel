@@ -44,6 +44,14 @@ ul li:nth-child(1){
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+ul li:nth-child(2)
+{
+    background: #df4f7c;
+}
+ul li:nth-child(2) a
+{
+    color: #fff;
+}
 ul li:nth-child(7){
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;

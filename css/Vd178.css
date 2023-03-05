@@ -1,0 +1,111 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/Chill-Image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header
+{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: rgba(255,255,255,.5);
+    padding: 0px 100px;
+    box-sizing: border-box;
+}
+header .logo img
+{
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+header .toggle
+{
+    position: absolute;
+    top: 10px;
+    right: 26px;
+    text-decoration: none;
+    background: #f00;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+}
+header ul
+{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 5px;
+    float: right;
+    display: flex;
+}
+
+header ul li
+{
+    list-style: none;
+}
+
+header ul li a
+{
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0d0d0d;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .5s;
+}
+header ul li a:hover
+{
+    background: #000;
+    color: #fff;
+}
+
+@media  screen and (max-width: 992px) {
+    header {
+        padding: 0px;
+    }
+    header .toggle
+    {
+        display: block;
+    }
+    header ul {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        flex-direction: column;
+        background: rgba(0,0,0,.5);
+        transition: .5s;
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    header ul.test
+    {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    header ul li a
+    {
+        color: #fff;
+    }
+    header .logo img
+    {
+        width: 40px;
+        height: 40px;
+        margin: 5px 0px 0px 30px;
+    }
+}
