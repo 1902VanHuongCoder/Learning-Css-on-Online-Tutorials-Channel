@@ -15,18 +15,19 @@
             <li><a href="#">Expert</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="#" class="loginButtonNav">Login</a></li>
         </ul>
     </header>
     <section>
         <div class="wrapper">
+            <div class="closeIcon">X</div>
             <div class="form-login">
                 <h1>Login</h1>
                 <div class="input">
                     <input type="email" name="email" id="email">
                     <span><ion-icon name="mail-outline"></ion-icon></span>
                     <label for="email">Email</label>
-                </div>
+                 </div>
                 <div class="input">
                     <input type="password" name="password" id="password">
                     <span><ion-icon name="lock-closed-outline"></ion-icon></span>
@@ -46,6 +47,36 @@
                 </div>
                 <div class="register">
                     <p>Don't have account? <a href="#">Register</a></p>
+                </div>
+            </div>
+
+            <!--Form Register-->
+            <div class="form-register">
+                <h1>Registation</h1>
+                <div class="input">
+                    <input type="text" name="username" id="username">
+                    <span><ion-icon name="mail-outline"></ion-icon></span>
+                    <label for="">Username</label>
+                 </div>
+                <div class="input">
+                    <input type="email" name="email" id="email">
+                    <span><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <label for="">Email</label>
+                </div>
+                <div class="input">
+                    <input type="password" name="password" id="password">
+                    <span><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <label for="Password">Password</label>
+                </div>
+                <div class="conditions">
+                    <input type="checkbox" name="" id="checkbox">
+                    <label for="checkbox">I agree to the terms & conditions</label>
+                </div>
+                <div class="login-btn">
+                    <a href="#">Register</a>
+                </div>
+                <div class="login">
+                    <p>Already have an account? <a href="#">Login</a></p>
                 </div>
             </div>
         </div>

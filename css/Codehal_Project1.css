@@ -87,29 +87,71 @@ header ul li:last-child a
 .wrapper
 {
     position: relative;
-    min-height: 400px;
-    width: 350px;
+    height: 400px;
+    width: 360px;
     border: 1px solid rgba(255,255,255,.5);
     backdrop-filter: blur(20px);
     border-radius: 10px;
+    transform-origin: center center;
+    transition: height .5s ease;
+    overflow: hidden;
+    display: none;
 }
-
-.wrapper .form-login
+.wrapper.openFormLogin
+{
+    display: block;
+}
+.wrapper.active
+{
+    height: 450px;
+}
+.closeIcon
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: #162938;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 10000;
+}
+.wrapper .form-login,
+.wrapper .form-register
 {
     position: absolute;
     width: 100%;
     height: 100%;
     padding: 30px;
 }
-
-.wrapper .form-login h1
+.wrapper .form-login.active
+{
+    transition: none;
+    transform: translateX(-360px);
+}
+.wrapper .form-register
+{
+    transform: translateX(360px);
+}
+.wrapper .form-register.active{
+    transform: translateX(0px);
+}
+.wrapper .form-login h1,
+.wrapper .form-register h1
 {
     color: #162938;
     text-align: center;
     font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.wrapper .form-login .input
+.wrapper .form-login .input,
+.wrapper .form-register .input
 {
     position: relative;
     width: 100%;
@@ -120,33 +162,112 @@ header ul li:last-child a
     margin-bottom: 30px;
 }
 
-.wrapper .form-login .input input
+.wrapper .form-login .input input,
+.wrapper .form-register .input input
 {
     width: 100%;
     height: 30px;
     background: transparent;
     outline: none;
     border: none;
-}
+} 
 
-.wrapper .form-login .input input:focus~label,
-.wrapper .form-login .input input:valid~label
-{
-    top: -3px;
-}
-.wrapper .form-login .input label
+.wrapper .form-login .input label,
+.wrapper .form-register .input label
 {
     position: absolute;
-    top: 50%;
+    top: 12px;
     left: 5px;
-    transform: translateY(-50%);
     transition: .5s;
-    pointer-events: none;
 }
-.wrapper .form-login .input span
+.wrapper .input input:focus~label,
+.wrapper .input input:valid~label
+{
+    top: -10px;
+}
+.wrapper .input label
+{
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    transition: .5s;
+}
+.wrapper .input span
 {
     position: absolute;
     top: 15px;
     right: 5px;
+} 
+
+.wrapper .form-login .Remember-Forgot
+{
+    position: relative;
+    top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.wrapper .form-login .coditions input{
+    background: #162938;
+}
+.wrapper .form-login .Remember-Forgot .forgot a
+{
+    text-decoration: none;
+    color: #162938;
+    font-weight: 600;
+}
+
+.wrapper .login-btn
+{
+    width: 100%;
+    height: 40px;
+    background: #162938;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .login-btn a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.wrapper .form-login .register
+{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.wrapper .form-register .login
+{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.wrapper .form-login .register a
+{
+    color: #162938;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .5s;
+}
+.wrapper  .form-register .login a
+{
+    color: #162938;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .5s;
+}
+.wrapper .form-login .register a:hover,
+.wrapper  .form-register .login a:hover
+{
+    text-decoration: underline;
+}
+/* Code tiếp tục form*/
 /*https://www.youtube.com/watch?v=p1GmFCGuVjw*/
