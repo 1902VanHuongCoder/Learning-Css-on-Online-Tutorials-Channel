@@ -1,0 +1,145 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #f349cc;
+}
+
+h1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    border-bottom: 8px solid #fff;
+    /* border: 1px solid black; */
+    box-shadow: 0 10px 10px #00000080;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+h1 span
+{
+    position: relative;
+    display: inline-block;
+    animation: animateh1 2s linear infinite;
+}
+h1 span::before
+{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    animation: animateBefore 2s linear infinite;
+}
+
+@keyframes animateBefore {
+    0%
+    {
+        bottom:0;
+        height: 4px;
+    }
+    20%
+    {
+        bottom:-36px;
+        height: 40px;
+    }
+    25%
+    {
+        bottom:0;
+        height: 4px;
+    }
+    40%
+    {
+        bottom: -26px;
+        height: 30px;
+    }
+    45%
+    {
+        bottom:0;
+        height: 4px;
+    }
+    60%
+    {
+        bottom:-16px;
+        height: 20px;
+    }
+    65%
+    {
+        bottom:0;
+        height: 4px;
+    }
+    
+}
+@keyframes animateh1 {
+    0%
+    {
+        transform: translateY(0px);
+    }
+    20%
+    {
+        transform: translateY(-40px);
+    }
+    25%
+    {
+        transform: translateY(0px);
+    }
+    40%
+    {
+        transform: translateY(-30px);
+    }
+    45%
+    {
+        transform: translateY(0px);
+    }
+    60%
+    {
+        transform: translateY(-20px);
+    }
+    65%
+    {
+        transform: translateY(0px);
+    }
+}
+
+h1 span:nth-child(1),
+h1 span:nth-child(1):before
+{
+    animation-delay: .1s;
+}
+h1 span:nth-child(2),
+h1 span:nth-child(2):before
+{
+    animation-delay: .2s;
+}
+h1 span:nth-child(3):before,
+h1 span:nth-child(3)
+{
+    animation-delay: .3s;
+}
+h1 span:nth-child(4):before,
+h1 span:nth-child(4)
+{
+    animation-delay: .4s;
+}
+h1 span:nth-child(5):before,
+h1 span:nth-child(5)
+{
+    animation-delay: .5s;
+}
+h1 span:nth-child(6):before,
+h1 span:nth-child(6)
+{
+    animation-delay: .6s;
+}
+h1 span:nth-child(7):before,
+h1 span:nth-child(7)
+{
+    animation-delay: .7s;
+}
