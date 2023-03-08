@@ -75,19 +75,27 @@ header ul li:last-child a::before
     content:"";
     background: transparent;
 }
-
+header ul li:last-child
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    /* background: red; */
+}
 header ul li:last-child a
 {
-    height: 100%;
+    height: 70%;
     background: #fff;
     border-radius: 5px;
     color: rgba(51,96,135,1);
+    line-height: 70%;
 }
 
 .wrapper
 {
     position: relative;
-    height: 400px;
+    height: 350px;
     width: 360px;
     border: 1px solid rgba(255,255,255,.5);
     backdrop-filter: blur(20px);
@@ -103,7 +111,7 @@ header ul li:last-child a
 }
 .wrapper.active
 {
-    height: 450px;
+    height: 390px;
 }
 .closeIcon
 {
@@ -137,7 +145,7 @@ header ul li:last-child a
 .wrapper .form-register
 {
     transform: translateX(360px);
-}
+} 
 .wrapper .form-register.active{
     transform: translateX(0px);
 }
@@ -149,53 +157,51 @@ header ul li:last-child a
     font-size: 2em;
     margin-bottom: 10px;
 }
-
-.wrapper .form-login .input,
-.wrapper .form-register .input
+.wrapper .input label
+{
+    position:absolute;
+    left: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+.wrapper .input input:valid ~ label
+{
+    top: -15px;
+}
+.wrapper .input
 {
     position: relative;
     width: 100%;
-    height: 50px;
-    background: transparent;
+    height: 40px;
+    /* background: red; */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 2px solid #162938;
-    padding: 10px 0;
-    margin-bottom: 30px;
-}
-
-.wrapper .form-login .input input,
-.wrapper .form-register .input input
-{
-    width: 100%;
-    height: 30px;
-    background: transparent;
-    outline: none;
-    border: none;
-} 
-.wrapper .input label
-{
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%); 
-    transition: .5s;
-    pointer-events: none;
-}
-.wrapper .input input:focus~label,
-.wrapper .input input:valid~label
-{
-    top: -5px;
 }
 .wrapper .input span
 {
     position: absolute;
-    top: 15px;
-    right: 5px;
-} 
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.wrapper .input input
+{
+    width: 100%;
+    height: 80%;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
 
 .wrapper .form-login .Remember-Forgot
 {
     position: relative;
-    top: -10px;
+    top: 0px;
+    /* background: red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
