@@ -43,7 +43,7 @@ ul li span
     height: 40%;
     top: -50px;
     left: -10px;
-    background: yellow;
+    background: rgb(253, 253, 4);
     padding: 4px;
     border-radius: 5px;
     display: flex;
@@ -51,6 +51,7 @@ ul li span
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transform: translateY(20px);
+    z-index: 2;
     opacity: 0;
     transition: .5s;
 }
@@ -61,10 +62,10 @@ ul li span::before
     position: absolute;
     bottom: -5px;
     left: 50%;
-    transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(135deg);
     width: 10px;
     height: 10px;
-    background:yellow;
+    background:linear-gradient(45deg, transparent 0%,transparent 50%, rgb(5, 5, 5) 50%, rgb(17, 17, 17)0%);
     z-index: -1;
 }
 ul li a:hover ~ span
