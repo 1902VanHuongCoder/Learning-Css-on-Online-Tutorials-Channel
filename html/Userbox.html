@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>User Box</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/Userbox.css'>
+</head>
+<body>
+    <div class="navigation">
+        <div class="userBox">
+            <div class="imgBox">
+                <img src="../img/Idol1Image.jpg" alt="Idol">
+            </div>
+            <p class="username">To Van Huong</p>
+        </div>
+        <div class="toggleBox"></div>
+        <ul class="menu">
+            <ul>
+                <li><a href="#"><ion-icon name="person-circle-outline"></ion-icon> Your profile</a></li>
+                <li><a href="#"><ion-icon name="build-outline"></ion-icon> Setting</a></li>
+                <li><a href="#"><ion-icon name="call-outline"></ion-icon> Response</a></li>
+                <li><a href="#"><ion-icon name="share-social-outline"></ion-icon> Share</a></li>
+                <li><a href="#"><ion-icon name="call-outline"></ion-icon> Calendar</a></li>
+                <li><a href="#"><ion-icon name="person-add-outline"></ion-icon> Register</a></li>
+                <li><a href="#"><ion-icon name="log-out-outline"></ion-icon> Log out</a></li>
+            </ul>
+        </ul>
+        <div class="clip-path1"></div>
+        <div class="clip-path2"></div>
+        <div class="clip-path3"></div>
+    </div>
+    <script>
+        const toggleBox = document.querySelector('.toggleBox');
+        const navigation = document.querySelector('.navigation');
+        const userBox = document.querySelector('.userBox');
+        toggleBox.addEventListener('click',function()
+        {
+            toggleBox.classList.toggle('active');
+            navigation.classList.toggle('active');
+            userBox.classList.toggle('active');
+
+        })
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>
