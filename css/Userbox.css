@@ -167,6 +167,7 @@ body
     line-height: 40px;
     border-bottom: 1px solid rgba(0,0,0,.1);
     /* background: #f00; */
+    color: #000;
 }
 .navigation .menu li:last-child a{
     text-align: center;
